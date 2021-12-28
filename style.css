@@ -1,0 +1,202 @@
+/*
+=============== 
+importing basic CSS(global variables)
+===============
+*/
+
+@import url("./basic.css");
+
+/*
+=============== 
+! Scroll
+===============
+*/
+/* navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 1.5rem;
+  background-color: var(--clr-black);
+  box-shadow: var(--dark-shadow);
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--theme--);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+  animation: bounce 2s ease-in-out infinite;
+}
+.nav-toggle:hover {
+  color: var(--clr-secondary);
+}
+.logo {
+  height: 95px;
+}
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-links {
+  height: 200px;
+}
+.links a {
+  position: relative;
+  background: var(--clr-black);
+  color: var(--clr-white);
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  transition: var(--transition);
+  padding: 0.75rem 0;
+}
+.links a:hover {
+  padding-left: 1.5rem;
+}
+/* ! Animated Hover->Underline effect */
+
+[underline-hover]:hover {
+  opacity: 1;
+}
+
+[underline-hover]:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--theme--);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+[underline-hover]:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* !NavBar on Smaller Screeen */
+
+@media screen and (min-width: 800px) {
+  nav {
+    background: black;
+  }
+  .nav-center {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+  }
+  .links a {
+    background: transparent;
+    color: var(--clr-white);
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    transition: var(--transition);
+    margin: 0 1rem;
+    padding: 0;
+  }
+  .links a:hover {
+    padding-left: 0;
+  }
+}
+/* ! Banner */
+header {
+  min-height: 100vh;
+  background: linear-gradient(rgba(54, 54, 189, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./img/banner.jpg) center/cover no-repeat;
+}
+.banner {
+  min-height: 95vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.container h1 {
+  color: var(--clr-white);
+  text-transform: uppercase;
+}
+.container p {
+  color: var(--clr-white);
+  max-width: 25rem;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .container p {
+    max-width: 40rem;
+  }
+}
+/* ! sections and title */
+.title h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.title span {
+  color: var(--theme--);
+}
+#new-games,
+#popular-games,
+#consoles {
+  height: 80vh;
+}
+footer {
+  background: var(--clr-grey-1);
+  padding: 5rem 1rem;
+}
+footer p {
+  color: var(--clr-white);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  margin-bottom: 0;
+}
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+/* !bouncing animation */
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
