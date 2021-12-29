@@ -4,7 +4,8 @@ Fonts
 ===============
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
 /*
 =============== 
 Variables
@@ -45,8 +46,8 @@ Variables
   --clr-secondary: hsla(182, 63%, 54%);
   --clr-black: black;
   --theme--:  rgba(54, 54, 189);
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
+  --ff-primary: 'Poppins', sans-serif;
+  --ff-secondary: 'Noto Sans', sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
@@ -144,7 +145,7 @@ p {
   display: inline-block;
   transition: var(--transition);
   font-size: 0.875rem;
-  border: 2px solid var(--clr-black);
+  border: 2px solid var(--theme--);
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
@@ -162,15 +163,14 @@ p {
 .btn:hover {
   background: var(--clr-white);
   color: var(--theme--);
-  font-weight: bold;
 }
 /* section */
 .section {
   padding-bottom: 5rem;
+  overflow: hidden;
 }
 
 .section-center {
-  width: 90vw;
   margin: 0 auto;
   max-width: 1170px;
 }

@@ -15,6 +15,7 @@ importing basic CSS(global variables)
 nav {
   position: fixed;
   top: 0;
+  z-index: 100;
   width: 100%;
   padding: 0 1.5rem;
   background-color: var(--clr-black);
@@ -163,11 +164,6 @@ header {
 .title span {
   color: var(--theme--);
 }
-#new-games,
-#popular-games,
-#consoles {
-  height: 80vh;
-}
 footer {
   background: var(--clr-grey-1);
   padding: 5rem 1rem;
@@ -195,6 +191,65 @@ footer p {
     transform: scale(1);
   }
 }
+
+/*
+=============== 
+! Styling sections
+===============
+*/
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  place-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  border-radius: 4px;
+  transition: all 500ms;
+  margin: 2rem auto;
+}
+
+.card {
+  width: 11rem;
+  height: 11rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wrapper:hover {
+  box-shadow:var(--theme--) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: translateY(-3px) scale(1.1);
+}
+
+.product-name {
+  margin-top: 1rem;
+  color: var(--clr-primary-1);
+}
+
+.add-to-cart {
+  margin: .6rem;
+}
+
+@media screen and (min-width: 800px) {
+  .card {
+    width: 15rem;
+    height: 15rem;
+  }
+  .add-to-cart {
+    margin: 1rem;
+  }
+}
+
+
 
 
 
