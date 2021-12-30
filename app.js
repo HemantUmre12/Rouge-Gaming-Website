@@ -65,11 +65,11 @@ const reviews = [
   {
     id: 1,
     name: "susan smith",
-    job: "web developer",
+    job: "Influencer",
     img:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
     text:
-      "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry",
+      "Great service, cheapest price & awesome support team. They were happy to answer every single queries I had before buying the product. Plus an option for COD for those who want it."
   },
   {
     id: 2,
@@ -78,16 +78,16 @@ const reviews = [
     img:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883409/person-2_np9x5l.jpg",
     text:
-      "Helvetica artisan kinfolk thundercats lumbersexual blue bottle. Disrupt glossier gastropub deep v vice franzen hell of brooklyn twee enamel pin fashion axe.photo booth jean shorts artisan narwhal.",
+      "In short pin point delivery, quality to the core, perfect packaging, and worth the price. Really enjoyed the gaming experience and the communication with the team.",
   },
   {
     id: 3,
     name: "peter jones",
-    job: "intern",
+    job: "Gamer",
     img:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
     text:
-      "Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.",
+      "Ordered for the first time from Rouge Gaming and I absolutely loved the experiece. Really fast delivery and excellent condition of the disc, the box etc. Great experience and I recommend it to everyone.",
   },
   {
     id: 4,
@@ -96,7 +96,7 @@ const reviews = [
     img:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg",
     text:
-      "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
+      "The whole experience was hassle free and quick. pickup was done in less than 24 hours from blue dart after I made sell order and then it just took 1 and half days for Rouge Gaming to receive the disc, check the disc and transfer the money.",
   },
 ];
 
