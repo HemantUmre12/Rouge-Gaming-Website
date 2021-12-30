@@ -22,6 +22,42 @@ links.addEventListener("click", () => {
 
 });
 
+// ********** Added to the cart ************
+
+let restartButton = document.querySelector('#restartButton');
+let addedMessage = document.querySelector('.added-message');
+let wrapper = [...document.querySelectorAll('.wrapper')];
+const addToCartBtn = [...document.querySelectorAll('.add-to-cart')];
+
+const removeHoverEffectFromWrapper = () => {
+  wrapper.forEach((card) => {
+    card.style.transition = "none";
+    card.style.pointerEvents = "none";
+  });
+};
+
+const addHoverEffectFromWrapper = () => {
+  wrapper.forEach((card) => {
+    card.style.transition = "var(--transition)";
+    card.style.pointerEvents = "all";
+  });
+};
+
+addToCartBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    removeHoverEffectFromWrapper();
+    addedMessage.classList.add("show");
+  })
+});
+
+restartButton.addEventListener("click", () => {
+  addHoverEffectFromWrapper();
+  addedMessage.classList.remove("show");
+});
+
+
+
+
 // ********** Review ************
 
 // local reviews data
@@ -76,7 +112,6 @@ const job = $("#job");
 const info = $("#info");
 const prevButton = $(".prev-btn");
 const nextButton = $(".next-btn");
-const randomButton = $(".random-btn");
 
 function displayReview(idx) {
   const currReview = reviews[idx];
@@ -112,9 +147,4 @@ prevButton.addEventListener("click", () => {
     currentReviewIdx--;
   }
   displayReview(currentReviewIdx);
-})
-
-randomButton.addEventListener("click", () => {
-  const idx = Math.floor(Math.random() * numberOfReviews);
-  displayReview(idx);
 })

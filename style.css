@@ -164,17 +164,7 @@ header {
 .title span {
   color: var(--theme--);
 }
-footer {
-  background: var(--clr-black);
-  padding: 5rem 1rem;
-}
-footer p {
-  color: var(--clr-white);
-  text-align: center;
-  text-transform: capitalize;
-  letter-spacing: var(--spacing);
-  margin-bottom: 0;
-}
+
 .show-link {
   visibility: visible;
   z-index: 100;
@@ -191,6 +181,56 @@ footer p {
     transform: scale(1);
   }
 }
+/* !ADDED to the cart message */
+
+.added-message {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.added-message-text {
+  font-size: 3rem;
+  color: var(--clr-white);
+  text-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+  font-family: cursive;
+  text-transform: capitalize;
+}
+
+.added-message button {
+  font-size: 1.7rem;
+  padding: .3em;
+  cursor: pointer;
+  border-color: black;
+  border-radius: .3em;
+}
+
+.added-message button:hover {
+  background-color: black;
+  color: white;
+  transform: scale(0.8);
+}
+
+.added-message {
+  display: none;
+}
+
+.added-message.show {
+  display: flex;
+}
+
+.gif > img:nth-child(1) {
+  width: 10rem;
+  transform: translateX(-10%);
+}
+
 
 /*
 =============== 
@@ -266,7 +306,7 @@ footer p {
   width: 100%;
 }
 
-#about h1, .review-title {
+#about h2, .review-title {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 2rem;
@@ -276,8 +316,8 @@ footer p {
 
 #about article {
   color: var(--clr-white);
+  margin: 1rem 0;
   max-width: var(--max-width);
-  padding-bottom: 2rem;
 }
 
 .underline {
@@ -345,6 +385,7 @@ footer p {
 }
 #author {
   margin-bottom: 0.25rem;
+  color: var(--theme--);
 }
 #job {
   margin-bottom: 0.5rem;
@@ -353,12 +394,13 @@ footer p {
   font-size: 0.85rem;
 }
 #info {
+  color: var(--clr-primary-1);
   margin-bottom: 0.75rem;
 }
 .prev-btn,
 .next-btn {
   color: var(--clr-primary-7);
-  font-size: 1.25rem;
+  font-size: 2rem;
   background: transparent;
   border-color: transparent;
   margin: 0 0.5rem;
@@ -369,22 +411,44 @@ footer p {
 .next-btn:hover {
   color: var(--theme--);
 }
-.random-btn {
-  margin-top: 0.5rem;
-  background: var(--clr-primary-10);
-  color: var(--theme--);
-  padding: 0.25rem 0.5rem;
-  text-transform: capitalize;
-  border-radius: var(--radius);
-  transition: var(--transition);
-  border-color: var(--theme--);
-  cursor: pointer;
+
+/* Footer */
+
+footer {
+  background: var(--clr-black);
+  display: grid;
+  place-items: center;
+  padding: 3rem 1rem;
 }
-.random-btn:hover {
-  background: var(--theme--);
-  color: var(--clr-primary-1);
+footer p {
+  color: var(--clr-white);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  margin-bottom: 0;
 }
 
+/* Socials */
+
+.links {
+  margin:auto;
+  text-align: center;
+}
+
+.links > a {
+  display: inline-block;
+  margin: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  transition: all 400ms ease-out;
+}
+
+.links > a:hover {
+  transform: scale(1.4);
+}
 
 
 
